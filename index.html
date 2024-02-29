@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">   
+    <title>Web Design</title> 
+</head>
+<html>
+    <body>
+        <!--Шапка-->
+        <header>
+            <nav>
+                <div class="showWindowIsDone">
+                    <img src="add.png" alt="done" class="logo">
+                    <div class="text">
+                        Ваша заявка отправлена! В течение дня с вами свяжутся сотрудники.
+                    </div>
+                </span>
+                </div>
+                <span class="links">
+                    <a href="#site_list" class="nav_link">сайты</a>
+                    <a href="#domen_list" class="nav_link">домены</a>
+                </span>
+            </nav>
+        </header>
+        <main>
+            <!--Бэкграунд-->
+            <div class="background-custom">
+                <div class="element-content elem1"> </div>
+                <div class="element-content elem2"> </div>
+                <div class="element-content elem3"> </div>
+                <div class="element-content elem4"> </div>
+                <div class="element-content elem5"> </div>
+                <div class="element-content elem6"> </div>
+                <div class="element-content elem7"> </div>
+            </div>
+            <!--Основной контент-->
+            <div class="main-contents">
+                <!--Описание компаний-->
+                <div class="infocompany">
+                    <div class="block">
+                        <img src="logo.png" alt="logo" class="logo">
+                    </div>
+                    <div class="block">
+                        <div class="text">
+                            Компания Web-Design специализируется на создание более красивых и удобных сайтов.
+                            Наша команда состоит из опытных сотрудников, которые преданны своей работе.
+                            Более 5 лет Web-Design радует своих клиентов, за счёт чего услуги в нашей стране пользуются большой популярностью.
+                        </div>
+                        <img src="1.png" alt="logo" class="deco_logo">
+                    </div>
+                </div>
+                <!--Отзывы клиентов-->
+                <div class="CommentsElem">
+                    <div class="block">
+                        <div class="text">
+                            Вот что думают наши клиенты об Web-Design
+                        </div>
+                        <div class="comments_block">
+                            <div class="comment_item">
+                               <span><img src="user1.jpg" alt="userlogo" class="logo"> Никита</span>
+                               <p>Да спасибо за сайт.</p>
+                            </div>
+                            <div class="comment_item">
+                                <span><img src="user3.jpg" alt="userlogo" class="logo"> Анвар</span>
+                                <p>Отвратительное обслуживание клиентов!!!</p>
+                             </div>
+                             <div class="comment_item">
+                                <span><img src="user2.jpg" alt="userlogo" class="logo"> Артём</span>
+                                <p>Хорошие дизайнеры! Хочу ещё заказать у них.</p>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Сетка с элементами-->
+                <!--Каталог с типами сайтов-->
+                <div class="products">
+                    <a name = "site_list">
+                        <div class="block">
+                            <p>Каталог сайтов</p>
+                            <div class="block_custom">
+                                <div class="block-item">
+                                    <div class="blockinfo">
+                                        ONE<br>PAGE
+                                    </div>
+                                    <div class="text">
+                                        Одностраничный сайт
+                                        <div class="price">150000 ₸</div>
+                                    </div>                                    
+                                    <button type = "button" class = "addProduct" id ="productSite1" onclick="showMainWindow(event)">Купить</button>
+                                </div>
+                                <div class="block-item">
+                                    <div class="blockinfo">
+                                        COMM<br>ERCIAL
+                                    </div>
+                                    <div class="text">
+                                        Сайт для коммерции
+                                        <div class="price">300000 ₸</div>
+                                    </div>
+                                    <button type = "button" class = "addProduct" id ="productSite2" onclick="showMainWindow(event)">Купить</button>
+                                </div>
+                                <div class="block-item">
+                                    <div class="blockinfo">
+                                        BUSI<br>NESS
+                                    </div>
+                                    <div class="text">
+                                        Сайт для бизнеса
+                                        <div class="price">500000 ₸</div>
+                                    </div>
+                                    <button type = "button" class = "addProduct" id ="productSite3" onclick="showMainWindow(event)">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!--Каталог с доменами-->
+                    <a name = "domen_list">
+                        <div class="block">
+                            <p>Каталог доменов</p>
+                            <div class="block_custom">
+                                <div class="block-item">
+                                    <div class="blockinfo">
+                                        KZ
+                                    </div>
+                                    <div class="text">
+                                        для всех видов сайтов
+                                        <div class="price">4251 ₸/год</div>
+                                    </div>
+                                    <button type = "button" class = "addProduct" id ="productDomen1" onclick="showMainWindow(event)">Купить</button>
+                                </div>
+                                <div class="block-item">
+                                    <div class="blockinfo">
+                                        GO<br>V
+                                    </div>
+                                    <div class="text">
+                                        для гос.учреждений
+                                        <div class="price">8397 ₸/год</div>
+                                    </div>
+                                    <button type = "button" class = "addProduct" id ="productDomen2" onclick="showMainWindow(event)">Купить</button>
+                                </div>
+                                <div class="block-item">
+                                    <div class="blockinfo">
+                                        CO<br>M
+                                    </div>
+                                    <div class="text">
+                                        для всех видов сайтов
+                                        <div class="price">12043 ₸/год</div>
+                                    </div>
+                                    <button type = "button" class = "addProduct" id ="productDomen3" onclick="showMainWindow(event)">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--Окно, появляюющийся при нажатии на один из элементов товара-->
+            <div class="windowBG">
+                <div class="window_custom">
+                    <button type = "button" class = "closeWindow">
+                        <div class="line"> </div>
+                        <div class="line"> </div>
+                    </button>
+                    <div class = "text">Укажите ваши данные</div>
+                    <div class="userInfo">
+                        <div class="text">Ваше имя</div>
+                        <input type="text" id ="userName" placeholder = "Например: Анвар" maxlength="20">
+                        <div class = "text">Номер телефона</div>
+                        <input type= "tel" id ="telUser" placeholder = "+7 (XXX) XXX-XX-XX" maxlength="12">
+                        <div class="textError">*Заполните все поля</div>
+                    </div>
+                    <button type = "submit" class = "clicksend">Отправить</button>
+                </div>
+            </div>
+        </main>
+        <!--Подвал сайта-->
+        <footer>
+            <ul>
+                <li><img src="logo.png" alt="logoOfCompany" class="logo"></li>
+                <li>
+                    <span class="info copyright">©2024 - web-design</span>
+                    <span class="info tel">+7 777 777 77 77</span>
+                </li>
+            </ul>
+        </footer>
+       <script src = "script.js"></script>
+    </body>
+</html>
