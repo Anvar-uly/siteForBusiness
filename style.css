@@ -1,5 +1,5 @@
 /*Обнуляем стили при помощи другого CSS-файла*/
-/*@import url('reset.css');*/
+@import url('reset.css');
 /*Общие стили*/
 :root {
     scroll-behavior: smooth;
