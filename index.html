@@ -11,7 +11,6 @@
         <header>
             <nav>
                 <div class="showWindowIsDone">
-                    <img src="add.png" alt="done" class="logo">
                     <div class="text">
                         Ваша заявка отправлена! В течение дня с вами свяжутся сотрудники.
                     </div>
@@ -23,17 +22,17 @@
                 </span>
             </nav>
         </header>
+         <!--Бэкграунд-->
+         <div class="background-custom">
+            <div class="element-content elem1"></div>
+            <div class="element-content elem2"></div>
+            <div class="element-content elem3"></div>
+            <div class="element-content elem4"></div>
+            <div class="element-content elem5"></div>
+            <div class="element-content elem6"></div>
+            <div class="element-content elem7"></div>
+        </div>
         <main>
-            <!--Бэкграунд-->
-            <div class="background-custom">
-                <div class="element-content elem1"> </div>
-                <div class="element-content elem2"> </div>
-                <div class="element-content elem3"> </div>
-                <div class="element-content elem4"> </div>
-                <div class="element-content elem5"> </div>
-                <div class="element-content elem6"> </div>
-                <div class="element-content elem7"> </div>
-            </div>
             <!--Основной контент-->
             <div class="main-contents">
                 <!--Описание компаний-->
@@ -67,7 +66,7 @@
                              </div>
                              <div class="comment_item">
                                 <span><img src="user2.jpg" alt="userlogo" class="logo"> Артём</span>
-                                <p>Хорошие дизайнеры! Хочу ещё заказать у них.</p>
+                                <p>Хорошие дизайнеры! Хочу ещё заказать.</p>
                              </div>
                         </div>
                     </div>
@@ -81,7 +80,7 @@
                             <div class="block_custom">
                                 <div class="block-item">
                                     <div class="blockinfo">
-                                        ONE<br>PAGE
+                                        ONEPAGE
                                     </div>
                                     <div class="text">
                                         Одностраничный сайт
@@ -91,7 +90,7 @@
                                 </div>
                                 <div class="block-item">
                                     <div class="blockinfo">
-                                        COMM<br>ERCIAL
+                                        COMMERCIAL
                                     </div>
                                     <div class="text">
                                         Сайт для коммерции
@@ -101,7 +100,7 @@
                                 </div>
                                 <div class="block-item">
                                     <div class="blockinfo">
-                                        BUSI<br>NESS
+                                        BUSINESS
                                     </div>
                                     <div class="text">
                                         Сайт для бизнеса
@@ -122,30 +121,30 @@
                                         KZ
                                     </div>
                                     <div class="text">
-                                        для всех видов сайтов
-                                        <div class="price">4251 ₸/год</div>
+                                        для всех видов сайтов (.kz)
+                                        <div class="price">4251 ₸</div>
                                     </div>
                                     <button type = "button" class = "addProduct" id ="productDomen1" onclick="showMainWindow(event)">Купить</button>
                                 </div>
                                 <div class="block-item">
                                     <div class="blockinfo">
-                                        GO<br>V
+                                        COM
                                     </div>
                                     <div class="text">
-                                        для гос.учреждений
-                                        <div class="price">8397 ₸/год</div>
+                                        для всех видов сайтов (.com)
+                                        <div class="price">12043 ₸</div>
                                     </div>
-                                    <button type = "button" class = "addProduct" id ="productDomen2" onclick="showMainWindow(event)">Купить</button>
+                                    <button type = "button" class = "addProduct" id ="productDomen3" onclick="showMainWindow(event)">Купить</button>
                                 </div>
                                 <div class="block-item">
                                     <div class="blockinfo">
-                                        CO<br>M
+                                        GOV
                                     </div>
                                     <div class="text">
-                                        для всех видов сайтов
-                                        <div class="price">12043 ₸/год</div>
+                                        для гос.учреждений (.gov)
+                                        <div class="price">8397 ₸</div>
                                     </div>
-                                    <button type = "button" class = "addProduct" id ="productDomen3" onclick="showMainWindow(event)">Купить</button>
+                                    <button type = "button" class = "addProduct" id ="productDomen2" onclick="showMainWindow(event)">Купить</button>
                                 </div>
                             </div>
                         </div>
@@ -156,15 +155,15 @@
             <div class="windowBG">
                 <div class="window_custom">
                     <button type = "button" class = "closeWindow">
-                        <div class="line"> </div>
-                        <div class="line"> </div>
+                        <div class="line"></div>
+                        <div class="line"></div>
                     </button>
                     <div class = "text">Укажите ваши данные</div>
                     <div class="userInfo">
                         <div class="text">Ваше имя</div>
-                        <input type="text" id ="userName" placeholder = "Например: Анвар" maxlength="20">
+                        <input type = "text" id = "userName" placeholder = "Например: Анвар" minlength = "3" maxlength = "20">
                         <div class = "text">Номер телефона</div>
-                        <input type= "tel" id ="telUser" placeholder = "+7 (XXX) XXX-XX-XX" maxlength="12">
+                        <input type = "tel" id = "telUser" placeholder = "+X (XXX) XXX-XX-XX" minlength="12" maxlength = "13">
                         <div class="textError">*Заполните все поля</div>
                     </div>
                     <button type = "submit" class = "clicksend">Отправить</button>
