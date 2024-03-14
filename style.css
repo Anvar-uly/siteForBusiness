@@ -1,17 +1,10 @@
 /*Обнуляем стили при помощи другого CSS-файла*/
 @import url('reset.css');
 /*Общие стили*/
-:root {
-    scroll-behavior: smooth;
-}
-::-webkit-scrollbar {
-    width: 9px;
-    opacity: 0;
-}
-::-webkit-scrollbar-thumb {
-    background-color: rgba(245, 245, 245, 0.708);
-    border-radius: 8px;   
-}
+a {text-decoration: none;}
+:root { scroll-behavior: smooth; }
+::-webkit-scrollbar { width: 7px; opacity: 0; }
+::-webkit-scrollbar-thumb { background-color: rgba(245, 245, 245, 0.708); border-radius: 8px;}
 a {color: white;}
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -23,73 +16,60 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 120vh;
 }
-.logo {width: 25%;}
+.logo {width: 250px;}
 .text {font-size: 22px;}
 /*Шапка сайта*/
 nav {
-    z-index: 2;
+    z-index: 48;
     position: fixed;
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 20px 10px;
+    padding: 20px 0px;
     gap: 5px;
     text-transform: lowercase;
 }
 .showWindowIsDone {
     display: none;
     position: fixed;
-    z-index: 2;
-    padding: 2px 1px;
+    z-index: 49;
+    padding: 3px;
     background-color: #101010;
-    border: 2px solid whitesmoke;
-    width: 45%;
+    border: 1px solid whitesmoke;
+    max-width: 580px;
     gap: 5px;
     justify-content: center;
     animation-name: show_window;
     animation-fill-mode: forwards;
     animation-duration: 5s;
-    transform: translateY(-75px);
+   
 }
 @keyframes show_window {
-    9% {
-        transform: translateY(40px);
-    }
     100% {
-        transform: translateY(40px);
-        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-duration: 5s;
         opacity: 0;
         display: none;
     }
 }
-.showWindowIsDone .text {
-    margin-top: 1px;
-    text-transform: none;
-    font-size: 17px;
-}
-.showWindowIsDone .logo{width: 5%;}
+.showWindowIsDone .text { margin-top: 1px; text-transform: none; font-size: 17px; }
 .links {font-size: 22px;}
 .nav_link {
+    position: relative;
     margin: 0 -3px;
     padding: 7px;
-    border: 1px solid white;
     background-color: #101010;
+    border: 1px solid white;
     color: whitesmoke;
-    background: none;
     transition-duration: 0.3s;
 }
-.nav_link:hover {
-    color: #101010;
-    background-color: whitesmoke;
-}
+.nav_link:hover { color: #101010; background-color: whitesmoke; }
 .nav_link:active {
     color: whitesmoke;
     background-color: greenyellow;
     border-color: greenyellow;
 }
-
 /*Элементы из заднего фона*/
 .background-custom {
     position: fixed;
@@ -102,7 +82,7 @@ nav {
     gap: 50px;
     overflow-x: hidden;
     overflow-y: hidden;
-    z-index: 0;
+    z-index: -1;
 }
 /*Сами элементы*/
 .element-content {
@@ -164,46 +144,25 @@ nav {
 }
 /*Ключи анимации*/ 
 @keyframes elem1 {
-    100% {
-        transform: rotate(-180deg);
-        transform: translateY(230px);
-    };
+    100% { transform: rotate(-180deg); transform: translateY(230px);};
 }
 @keyframes elem2 {
-    100% {
-        transform: rotate(711deg);
-        transform: translateY(-202px);
-    };
+    100% {transform: rotate(711deg); transform: translateY(-202px);};
 }
 @keyframes elem3 {
-    100% {
-        transform: rotate(300deg);
-        transform: translateY(-200px);
-    };
+    100% {transform: rotate(300deg); transform: translateY(-200px);};
 }
 @keyframes elem4 {
-    100% {
-        transform: rotate(387deg);
-        transform: translateY(-440px);
-    };
+    100% {transform: rotate(387deg); transform: translateY(-440px);};
 }
 @keyframes elem5 {
-    100% {
-        transform: rotate(589deg);
-        transform: translateY(-170px);
-    };
+    100% {transform: rotate(589deg); transform: translateY(-170px);};
 }
 @keyframes elem6 {
-    100% {
-        transform: rotate(727deg);
-        transform: translateY(110px);
-    };
+    100% {transform: rotate(727deg); transform: translateY(110px);};
 }
 @keyframes elem7 {
-    100% {
-        transform: rotate(-945deg);
-        transform: translateY(183px);
-    };
+    100% {transform: rotate(-945deg); transform: translateY(183px);};
 }
 /*Основной контент*/
 .main-contents {
@@ -225,56 +184,41 @@ nav {
     align-items: center;
     padding: 30px;
     flex-direction: row;
-    gap: 15%;
     transform: translateX(-10px);
-    animation-name: showcontent;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    opacity: 0;
+    gap: 15%;
 }
 .infocompany .block:last-child {justify-content: center;}
-.infocompany .text {width: 45%;}
+.infocompany .text {width: 50%;}
 .infocompany .block .logo {width: 18%;}
-.deco_logo{
-    width: 15%;
-    transform: rotate(71deg);
-}
-@keyframes showcontent {
-    100% {
-        transform: translate(10px);
-        opacity: 1;
-    }
-}
+.deco_logo{ width: 15%; transform: rotate(71deg); }
 /*Элемент с отзывами*/
 .CommentsElem {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 6%;
+    gap: 2%;
     align-items: center;
     padding: 10px;
 }
-.CommentsElem .text {
-    font-size: 40px;
-    width: 150%;
-}
+.CommentsElem .text { font-size: 40px; width: 100%; }
 .comments_block {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     width: 120%;
 }
 .comment_item {
-    width: 85%;
-    background-color: #1010108d;
+    width: 100%;
+    background-color: #101010;
+    color: whitesmoke;
     border: 1px solid whitesmoke;
-    padding: 10px;
+    padding: 16px;
 }
-
 .comment_item .logo {
-    width: 10%;
+    width: 6%;
     border-radius: 50px;
-    margin-right: 5px;
+    margin-right: 7px;
+    margin-bottom: 8px;
 }
 /*Каталог с товарами*/
 .products .block {
@@ -285,18 +229,19 @@ nav {
 }
 .products p {font-size: 35px;}
 .block_custom {
-    margin: 10px;
     display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 95%;
 }
 .block-item {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    width: 200px;
-    height: 500px;
-    background-color: #1010108d;
+    width: 95%;
+    height: 80px;
+    background-color: #101010;
     border: 1px solid whitesmoke;
     margin: 10px;
 }
@@ -304,22 +249,21 @@ nav {
     margin: 20px;
     overflow-y: hidden;
     overflow-x: hidden;
-    border: 1px solid whitesmoke;
     width: 80%;
-    height: 50%;
-    font-size: 80px;
-    color: #10101000;
-    -webkit-text-stroke: 0.2px whitesmoke;
+    height: 56%;
+    font-size: 60px;
+    border: 0.9px solid whitesmoke;
+    color: whitesmoke;
 }
 .block-item .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-transform: uppercase;
-    width: 98%;
+    width: 90%;
     font-size: 15px;
 }
-.price {
-    font-size: 25px;
-    width: 95%;
-}
+.price { margin-right: 10px; font-size: 25px; }
 .addProduct {
     padding: 5px;
     background: none;
@@ -328,54 +272,59 @@ nav {
     color: whitesmoke;
     font-size: 20px;
     transition-duration: 0.3s;
-    width: 100%;
+    width: 15em;
+    height: 2em;
+    transition-duration: 0.5s;
 }
 .addProduct:hover {
+    width: 14.9em;
+    height: 1.9em;
+    font-size: 19px;
     background-color: whitesmoke;
     color: #101010;
 }
-.addProduct:active {
-    background-color: yellowgreen;
-    border-color: yellowgreen;
-}
+.addProduct:active { background-color: yellowgreen; border-color: yellowgreen; }
 /*Форма*/
 .windowBG {
     position: fixed;
-    z-index: 2;
+    z-index: 50;
     display: none;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(5px);
+    background-color: #101010f0;
 }
 /*Создание иконки для закрытия окна*/
 .closeWindow {
     background: none;
     border: none;
     height: 30px;
-    margin-left: 94%;
+    margin-left: 92.5%;
     padding: 0 10px;
 }
 .line {
-    width: 20px;
+    width: 25px;
     height: 0px;
     border: 2px solid whitesmoke;
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
+    transition-duration: 0.2s;
 }
-.line:first-child {transform: rotate(50deg);}
-.line:last-child {
-    transform: rotate(-50deg);
-    margin-top: -2px;
+.line:first-child {transform: rotate(45deg);}
+.line:last-child { transform: rotate(-45deg); margin-top: -2px; }
+.closeWindow:hover {
+    .line {
+        border-color: yellowgreen;
+        box-shadow: 0px 0px 1px yellowgreen;
+    }
 }
 .window_custom {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 25%;
+    width: 22em;
     padding: 8px 15px;
     background-color: #101010;
     border: 1px solid whitesmoke;
@@ -385,20 +334,29 @@ nav {
     text-transform: uppercase;
 }
 .userInfo .text {
-    text-transform:none;
-    font-size: 15px;
+    margin-top: 3px;
+    text-transform: none;
+    font-size: 17px;
 }
-.text {
-    padding: 5px 0px;
-}
+.text { padding: 5px 0px; }
 .window_custom input {
-    width: 95%;
+    width: 98.9%;
     height: 1.5em;
     padding: 5px 2px;
     background: #101010;
     border: 1px solid #2c2c2c;
-    color: whitesmoke;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
     border-radius: 0;
+    color: whitesmoke;
+    transition-duration: 0.3s;
+}
+.window_custom input:focus {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-color: white;
 }
 .textError {
     display: none;
@@ -414,7 +372,7 @@ nav {
     border-radius: 0;
     padding: 5px;
     font-size: 20px;
-    width: 33%;
+   
     transition-duration: 0.3s;
 }
 .clicksend:hover {
@@ -425,11 +383,14 @@ nav {
 /*Подвал сайта*/
 footer {
     padding: 30px 20px;
-    background-color: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(20px);
+    background-color: #101010;
+    border: 1px solid whitesmoke;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
     font-size: 14.5px;
 }
-footer .logo {width: 9.5%;}
+footer .logo {width: 8em;}
 footer li {margin: 5px 0px;}
 .copyright {
     border: 2px solid white;
@@ -439,68 +400,26 @@ footer li {margin: 5px 0px;}
     padding: 0px 5px 0px 0px;
 }
 /*Медиазапросы*/
-
-@media screen and (max-width: 1350px) {
-    .infocompany .text {width: 60%;}
-    .CommentsElem .text {font-size: 24px;}
-    .comments_item {width: 350%;}
-    .clicksend {width: 55%;}
-    .window_custom .text {font-size: 18px;}
-    .showWindowIsDone {width: 48%;}
-}
-@media screen and (max-width: 992px) {
-    
-    .infocompany .block .text {font-size: 19px;}
-    .CommentsElem .text {font-size: 22px;}
-    .comments_block p {font-size: 15px;}
-    .comment_item {width: 100%;}
-    .block-item {
-        width: 170px;
-        height: 500px;
+@media (max-width: 1000px) {
+    .text {font-size: 17px; flex-wrap: wrap;}
+    .showWindowIsDone .text {font-size: 13.9px;}
+    .infocompany { padding: 0; }
+    .infocompany .block {padding: 10px;}
+    .infocompany .block .logo {width: 8em;}
+    .deco_logo {width: 28%;}
+    .infocompany .block .text {width: 100%;}   
+    .infocompany .block { flex-direction: column-reverse; width: 90%; }
+    .CommentsElem {justify-content: end;}
+    .CommentsElem .text {font-size: 30px; padding-bottom: 10px;}   
+    .CommentsElem .block {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
     }
-    .block-item .text {font-size: 12px;}
-    .clicksend {width: 44%;}
-    .window_custom .text {font-size: 15px;}
-    .window_custom {width: 36%;}
-}
-@media screen and (max-width: 767px) {
-    .infocompany .block .text {font-size: 17px;}
-    .CommentsElem .text {font-size: 17px;}
-    .comments_block p {font-size: 12.5px;}
-    .block-item {
-        width: 148px;
-        height: 430px;
-    }
-    .products .block {
-        justify-content: center;
-        align-items: center;
-    }
-    .products .block .text {font-size: 10px;}
-    .price {font-size: 20px;}
-    .clicksend {width: 48%;}
-}
-
-/*Другое*/
-@media screen and (max-width: 992px) {
-    .comments_block {
-        width: 300%;
-    }   
-}
-@media screen and (max-width: 1235px) {
-    .showWindowIsDone {width: 53%;}
-}
-@media screen and (max-width: 1121px) {
-    .showWindowIsDone {width: 57%;}
-}
-@media screen and (max-width: 1047px) {
-    .showWindowIsDone {width: 65%;}
-}
-@media screen and (max-width: 915px) {
-    .showWindowIsDone {width: 80%;}
-}
-@media screen and (max-width: 748px) {
-    .showWindowIsDone {width: 88%;}
-}
-@media screen and (max-width: 684px) {
-    .showWindowIsDone {width: 99.5%;}
+    .comment_item { width: 85%; }
+    .block-item {width: 110%;}
+    .block-item .text { font-size: 13px; width: 100%; margin-left: 10px; }
+    .blockinfo { display: none; }
+    .addProduct {width: 14.8em;}
+    .addProduct:hover {width: 14.7em; height: 1.85em;}
 }
